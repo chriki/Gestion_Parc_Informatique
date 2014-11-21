@@ -20,3 +20,6 @@ C:\Users\Lahcen\Desktop\Application ONEE\Gestion_Parc_Informatique\Gestion_Parc_
 C:\Users\Lahcen\Desktop\Application ONEE\Gestion_Parc_Informatique\Gestion_Parc_Informatique\obj\x86\Debug\Gestion_Parc_Informatique.Form_Materiel_Modifier.resources
 C:\Users\Lahcen\Desktop\Application ONEE\Gestion_Parc_Informatique\Gestion_Parc_Informatique\obj\x86\Debug\Gestion_Parc_Informatique.Form_ServiceCentre_Modifier.resources
 C:\Users\Lahcen\Desktop\Application ONEE\Gestion_Parc_Informatique\Gestion_Parc_Informatique\bin\Debug\Gestion_Parc_Informatique.exe.config
+C:\Users\Lahcen\Desktop\Work\Gestion_Parc_Informatique\Gestion_Parc_Informatique\Gestion_Parc_Informatique\bin\Debug\Gestion_Parc_Informatique.exe.config
+C:\Users\Lahcen\Desktop\Work\Gestion_Parc_Informatique\Gestion_Parc_Informatique\Gestion_Parc_Informatique\obj\x86\Debug\Gestion_Parc_Informatique.exe
+C:\Users\Lahcen\Desktop\Work\Gestion_Parc_Informatique\Gestion_Parc_Informatique\Gestion_Parc_Informatique\obj\x86\Debug\Gestion_Parc_Informatique.pdb

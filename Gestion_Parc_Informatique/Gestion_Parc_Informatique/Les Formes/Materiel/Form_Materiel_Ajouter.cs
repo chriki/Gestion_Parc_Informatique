@@ -20,5 +20,11 @@ namespace Gestion_Parc_Informatique
         {
 
         }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        { 
+            /////TxtBoxCodeOnee_Matereil .Text
+
+        }
     }
 }
