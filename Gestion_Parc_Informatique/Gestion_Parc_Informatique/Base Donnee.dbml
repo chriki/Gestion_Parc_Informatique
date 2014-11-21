@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ParcInformatique" Class="Base_DonneeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=ParcInformatique;Integrated Security=True" SettingsObjectName="Gestion_Parc_Informatique.Properties.Settings" SettingsPropertyName="ParcInformatiqueConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Entite" Member="Entite">
+    <Type Name="Entite">
+      <Column Name="CodEntite" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Entite" Member="Entite1" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="Entite_Utilisateur" Member="Utilisateur" ThisKey="CodEntite" OtherKey="CodEntite" Type="Utilisateur" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Utilisateur_ServiceCentre" Member="Utilisateur_ServiceCentre">
+    <Type Name="Utilisateur_ServiceCentre">
+      <Column Name="Matricule" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeServiceCentre" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Service_Centre_Utilisateur_ServiceCentre" Member="Service_Centre" ThisKey="CodeServiceCentre" OtherKey="CodeServiceCentre" Type="Service_Centre" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Utilisateur_Utilisateur_ServiceCentre" Member="Utilisateur" ThisKey="Matricule" OtherKey="Matricule" Type="Utilisateur" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Materiele" Member="Materiele">
+    <Type Name="Materiele">
+      <Column Name="CodeONEE" Type="System.String" DbType="VarChar(60) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeTypeMateriel" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Marque" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Modelle" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroSerie" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Recouvrement" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="GestionExperientielle" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="gestionAbonnes" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Utilisation" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="Materiele_Utili_Materil_Entite" Member="Utili_Materil_Entite" ThisKey="CodeONEE" OtherKey="CodeONEE" Type="Utili_Materil_Entite" />
+      <Association Name="TypeMateriel_Materiele" Member="TypeMateriel" ThisKey="CodeTypeMateriel" OtherKey="CodeTypeMateriel" Type="TypeMateriel" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Service_Centre" Member="Service_Centre">
+    <Type Name="Service_Centre">
+      <Column Name="CodeServiceCentre" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceCentre" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="M2t" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Association Name="Service_Centre_Utilisateur_ServiceCentre" Member="Utilisateur_ServiceCentre" ThisKey="CodeServiceCentre" OtherKey="CodeServiceCentre" Type="Utilisateur_ServiceCentre" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypeMateriel" Member="TypeMateriel">
+    <Type Name="TypeMateriel">
+      <Column Name="CodeTypeMateriel" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeMatereil" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="TypeMateriel_Materiele" Member="Materiele" ThisKey="CodeTypeMateriel" OtherKey="CodeTypeMateriel" Type="Materiele" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Utili_Materil_Entite" Member="Utili_Materil_Entite">
+    <Type Name="Utili_Materil_Entite">
+      <Column Name="Matricule" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeONEE" Type="System.String" DbType="VarChar(60) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Materiele_Utili_Materil_Entite" Member="Materiele" ThisKey="CodeONEE" OtherKey="CodeONEE" Type="Materiele" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Utilisateur_Utili_Materil_Entite" Member="Utilisateur" ThisKey="Matricule" OtherKey="Matricule" Type="Utilisateur" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Utilisateur" Member="Utilisateur">
+    <Type Name="Utilisateur">
+      <Column Name="Matricule" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodEntite" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nom" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenom" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Association Name="Utilisateur_Utilisateur_ServiceCentre" Member="Utilisateur_ServiceCentre" ThisKey="Matricule" OtherKey="Matricule" Type="Utilisateur_ServiceCentre" />
+      <Association Name="Utilisateur_Utili_Materil_Entite" Member="Utili_Materil_Entite" ThisKey="Matricule" OtherKey="Matricule" Type="Utili_Materil_Entite" />
+      <Association Name="Entite_Utilisateur" Member="Entite" ThisKey="CodEntite" OtherKey="CodEntite" Type="Entite" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+</Database>

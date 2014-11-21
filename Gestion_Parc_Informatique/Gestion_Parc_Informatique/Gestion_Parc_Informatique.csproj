@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E297A008-260D-4F24-95A1-956D54F6B926}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gestion_Parc_Informatique</RootNamespace>
+    <AssemblyName>Gestion_Parc_Informatique</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base Donnee.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base Donnee.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Modifier.Designer.cs">
+      <DependentUpon>Form_ServiceCentre_Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\FormAjouter_Chercher_Affichier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\FormAjouter_Chercher_Affichier.Designer.cs">
+      <DependentUpon>FormAjouter_Chercher_Affichier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\FormChoix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\FormChoix.Designer.cs">
+      <DependentUpon>FormChoix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Affichier\Form_AfficherTout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Affichier\Form_AfficherTout.Designer.cs">
+      <DependentUpon>Form_AfficherTout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Materiel\Form_Materiel_Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Materiel\Form_Materiel_Modifier.Designer.cs">
+      <DependentUpon>Form_Materiel_Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Materiel\Form_Materiel_Afficher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Materiel\Form_Materiel_Afficher.Designer.cs">
+      <DependentUpon>Form_Materiel_Afficher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Materiel\Form_Materiel_Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Materiel\Form_Materiel_Ajouter.Designer.cs">
+      <DependentUpon>Form_Materiel_Ajouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Afficher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Afficher.Designer.cs">
+      <DependentUpon>Form_ServiceCentre_Afficher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Ajouter.Designer.cs">
+      <DependentUpon>Form_ServiceCentre_Ajouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Utilisateur\Form_Utilisateur_Affichier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Utilisateur\Form_Utilisateur_Affichier.Designer.cs">
+      <DependentUpon>Form_Utilisateur_Affichier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Utilisateur\Form_Utilisateur_Ajouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Utilisateur\Form_Utilisateur_Ajouter.Designer.cs">
+      <DependentUpon>Form_Utilisateur_Ajouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Utilisateur\Form_Utilisateur_Mdifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Utilisateur\Form_Utilisateur_Mdifier.Designer.cs">
+      <DependentUpon>Form_Utilisateur_Mdifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Les Formes\Utilisateur\Form_utlisateur_utli_Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Les Formes\Utilisateur\Form_utlisateur_utli_Modifier.Designer.cs">
+      <DependentUpon>Form_utlisateur_utli_Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
+    <None Include="Base Donnee.dbml.layout">
+      <DependentUpon>Base Donnee.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Modifier.resx">
+      <DependentUpon>Form_ServiceCentre_Modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\FormAjouter_Chercher_Affichier.resx">
+      <DependentUpon>FormAjouter_Chercher_Affichier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\FormChoix.resx">
+      <DependentUpon>FormChoix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Affichier\Form_AfficherTout.resx">
+      <DependentUpon>Form_AfficherTout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Materiel\Form_Materiel_Modifier.resx">
+      <DependentUpon>Form_Materiel_Modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Materiel\Form_Materiel_Afficher.resx">
+      <DependentUpon>Form_Materiel_Afficher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Materiel\Form_Materiel_Ajouter.resx">
+      <DependentUpon>Form_Materiel_Ajouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Afficher.resx">
+      <DependentUpon>Form_ServiceCentre_Afficher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Service&amp;Centre\Form_ServiceCentre_Ajouter.resx">
+      <DependentUpon>Form_ServiceCentre_Ajouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Utilisateur\Form_Utilisateur_Affichier.resx">
+      <DependentUpon>Form_Utilisateur_Affichier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Utilisateur\Form_Utilisateur_Ajouter.resx">
+      <DependentUpon>Form_Utilisateur_Ajouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Utilisateur\Form_Utilisateur_Mdifier.resx">
+      <DependentUpon>Form_Utilisateur_Mdifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Les Formes\Utilisateur\Form_utlisateur_utli_Modifier.resx">
+      <DependentUpon>Form_utlisateur_utli_Modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Base Donnee.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Base Donnee.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
